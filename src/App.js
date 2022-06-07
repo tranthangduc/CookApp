@@ -8,8 +8,7 @@ function App() {
   return (
     <div className="wrapper">
       <div className="container">
-        <h1>Cook App</h1>
-        {/* <Test /> */}
+        <h1>クック　アプリケーション</h1>
         <AddFood />
         <FoodList />
       </div>
