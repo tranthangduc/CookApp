@@ -32,19 +32,19 @@ export default function ModalAddFoodForm({
     >
       <Form form={form} name="add-food-form" autoComplete="off">
         <Form.Item
-          label="Tên món ăn"
+          label="食べ物の名前"
           name={["data", "name"]}
           layout="vertical"
           rules={[
             {
               required: true,
-              message: "Missing name",
+              message: "名前がありません",
             },
           ]}
         >
           <Input />
         </Form.Item>
-        <label>Nguyên liệu:</label> <br />
+        <label>材料:</label> <br />
         <Form.List name={["data", "ingredients"]}>
           {(fields, { add, remove }) => (
             <>
@@ -60,12 +60,12 @@ export default function ModalAddFoodForm({
                     {() => (
                       <Form.Item
                         {...field}
-                        label="Name"
+                        label="名前"
                         name={[field.name, "name"]}
                         rules={[
                           {
                             required: true,
-                            message: "Missing name",
+                            message: "名前がありません",
                           },
                         ]}
                       >
@@ -75,12 +75,12 @@ export default function ModalAddFoodForm({
                   </Form.Item>
                   <Form.Item
                     {...field}
-                    label="Mass"
+                    label="質量"
                     name={[field.name, "mass"]}
                     rules={[
                       {
                         required: true,
-                        message: "Missing mass",
+                        message: "質量がありません",
                       },
                     ]}
                   >
@@ -98,13 +98,13 @@ export default function ModalAddFoodForm({
                   block
                   icon={<PlusOutlined />}
                 >
-                  Add ingredient
+                  材料を追加
                 </Button>
               </Form.Item>
             </>
           )}
         </Form.List>
-        <span>Cách nấu</span>
+        <span>料理の使い方</span>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <Form.List name={["data", "howToCook"]}>
             {(fields, { add, remove }) => (
@@ -125,7 +125,7 @@ export default function ModalAddFoodForm({
                           rules={[
                             {
                               required: true,
-                              message: "Missing step",
+                              message: "行方不明のステップ",
                             },
                           ]}
                         >
@@ -149,14 +149,16 @@ export default function ModalAddFoodForm({
                     icon={<PlusOutlined />}
                     block
                   >
-                    Add step
+                    ステップを追加
                   </Button>
                 </Form.Item>
               </>
             )}
           </Form.List>
         </div>
-        {!isFilled ? <p>you need add ingredient and add step</p> : null}
+        {!isFilled ? (
+          <p>材料を追加してステップを追加する必要があります</p>
+        ) : null}
       </Form>
     </Modal>
   );

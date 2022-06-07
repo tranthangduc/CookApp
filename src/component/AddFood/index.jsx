@@ -13,7 +13,7 @@ export default function AddFood() {
   const { data } = state;
 
   const onFinish = (values) => {
-    console.log("Received values of form:", values);
+    // console.log("Received values of form:", values);
     if (
       values.data.ingredients === undefined ||
       values.data.howToCook === undefined ||
