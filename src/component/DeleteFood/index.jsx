@@ -6,10 +6,10 @@ import { DataContext } from "../../store/GlobalState";
 export default function DeleteFood({ index }) {
   const { state, dispatch } = useContext(DataContext);
   const { data } = state;
-  const text = "Are you sure to delete this food?";
+  const text = "削除を確認？";
 
   const confirm = () => {
-    message.info("Xóa thành công");
+    message.info("もう削除しました");
     handleDeleteFood(index);
   };
   const handleDeleteFood = (index) => {
@@ -20,11 +20,11 @@ export default function DeleteFood({ index }) {
       placement="right"
       title={text}
       onConfirm={confirm}
-      okText="Yes"
-      cancelText="No"
+      okText="はい"
+      cancelText="いいえ"
     >
       <Button type="primary" danger>
-        Delete Food
+        料理を削除
       </Button>
     </Popconfirm>
   );
