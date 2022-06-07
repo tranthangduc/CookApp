@@ -34,7 +34,7 @@ export default function AddFood() {
         type="primary"
         onClick={() => setIsModalVisible(true)}
       >
-        Thêm món ăn
+        料理を追加
       </Button>
       {isModalVisible ? (
         <ModalAddFoodForm

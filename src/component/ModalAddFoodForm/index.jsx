@@ -12,10 +12,10 @@ export default function ModalAddFoodForm({
   const [form] = Form.useForm();
   return (
     <Modal
-      title="Thêm món ăn"
+      title="料理を追加"
       visible={isModalVisible}
-      okText="Create"
-      cancelText="Cancel"
+      okText="クリーエート"
+      cancelText="キャンセル"
       width={700}
       onCancel={onCancel}
       onOk={() => {
@@ -120,7 +120,7 @@ export default function ModalAddFoodForm({
                       {() => (
                         <Form.Item
                           {...field}
-                          label={`Step ${index + 1}`}
+                          label={`ステップ ${index + 1}`}
                           name={field.name}
                           rules={[
                             {
