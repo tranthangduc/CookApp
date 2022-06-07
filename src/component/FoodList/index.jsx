@@ -5,7 +5,8 @@ import FoodListItem from "../FoodListItem";
 import DeleteFood from "../DeleteFood";
 const { Panel } = Collapse;
 
-export default function FoodList() {
+function FoodList() {
+
   const { state } = useContext(DataContext);
   const { data } = state;
 
@@ -20,3 +21,5 @@ export default function FoodList() {
     </Collapse>
   );
 }
+
+export default FoodList;
