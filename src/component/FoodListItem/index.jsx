@@ -3,7 +3,7 @@ import React from "react";
 export default function FoodListItem({ item }) {
   return (
     <div className="food-detail">
-      <h2>Nguyên liệu:</h2>
+      <h2>材料:</h2>
       <ul>
         {item.ingredients.map((ingredient, index) => (
           <li key={index}>
@@ -11,7 +11,7 @@ export default function FoodListItem({ item }) {
           </li>
         ))}
       </ul>
-      <h2>Cách nấu:</h2>
+      <h2>作り方:</h2>
       <ul>
         {item.howToCook.map((step, index) => (
           <li key={index}>{`Step ${index + 1} : ${step}`}</li>
