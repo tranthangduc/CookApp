@@ -12,16 +12,6 @@ const reducers = (state, action) => {
         ...state,
         data: action.payload,
       };
-    case ACTIONS.SET_INGREDIENTS:
-      return {
-        ...state,
-        ingredients: action.payload,
-      };
-    case ACTIONS.SET_STEP:
-      return {
-        ...state,
-        steps: action.payload,
-      };
     default:
       return state;
   }
