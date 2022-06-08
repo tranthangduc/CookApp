@@ -14,7 +14,7 @@ export default function FoodListItem({ item }) {
       <h2>作り方:</h2>
       <ul>
         {item.howToCook.map((step, index) => (
-          <li key={index}>{`Step ${index + 1} : ${step}`}</li>
+          <li key={index}>{`ステップ ${index + 1} : ${step}`}</li>
         ))}
       </ul>
     </div>
